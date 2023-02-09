@@ -1,0 +1,12 @@
+﻿@model Sales
+
+<h2>Add Sale</h2>
+<form asp-action="AddSales" method="post">
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Sale</button>
+</form>
+<partial name="ChartPartialView"/>
