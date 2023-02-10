@@ -1,8 +1,15 @@
 ﻿@model List<Sales>
+<div style="display:flex;flex-wrap:wrap;">
 <div style="width:50%;">
     <canvas id="salesChart"></canvas>
 </div>
-
+<div style="width:50%;">
+    <canvas id="salesChartBar"></canvas>
+</div>
+    <div style="width:50%;">
+        <canvas id="salesChartPie"></canvas>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
 <script>
@@ -14,6 +21,7 @@
         console.log(amounts);
 
         var ctx = document.getElementById("salesChart").getContext('2d');
+        
         var chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -36,24 +44,65 @@
                 }
             }
         });
-        console.log(chart);
+   
+    var ctx = document.getElementById("salesChartBar").getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Sales',
+                data: amounts,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    var ctx = document.getElementById("salesChartPie").getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: dates, amounts,
+            datasets: [{
+                label: 'Sales',
+                data: amounts,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    console.log(chart);
     function updateChartData(newSale) {
         salesData.push(newSale);
         chart.data.labels = salesData.map(function (sale) { return sale.createdDate; });
         chart.data.datasets[0].data = salesData.map(function (sale) { return sale.amount; });
         chart.update();
     }
-
-    document.querySelector("#add-sale-form").addEventListener("submit", function (event) {
+    setInterval(chart.update, 0, console.log("updated"))
+    window.addEventListener('load', function (event) {
         event.preventDefault();
 
-        var amount = document.querySelector("#Amount").value;
-
-        // Add the sale to the database
-        // (Assuming you have implemented a way to communicate with the server and add a sale to the database)
-
-        // Update the chart data
-        var newSale = { createdDate: new Date(), amount: amount };
         updateChartData(newSale);
     });
+
 </script>
