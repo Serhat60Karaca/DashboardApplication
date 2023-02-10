@@ -10534,11 +10534,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\DashboardApp\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
       "projectName": "ChartDemo",
-      "projectPath": "C:\\Users\\lenovo\\Desktop\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\DashboardApp\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\Desktop\\DashBoardApplication\\ChartDemo\\ChartDemo\\obj\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\DashboardApp\\DashBoardApplication\\ChartDemo\\ChartDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2jZgWaqEhcVWnXSBbV9iGEWdvXaEywXiaeXjv8hyarL/dQKA7RB9ujEVs7sgxmerwukO9QW+2o0IIEwIUtmj8A==",
+  "dgSpecHash": "GXZE/InoVpc7XSSOrVewt/nSHlXr3ddgp3FuSDOSSFWbZy98Ed2d2ge9q7sTvjyFWEBmC1J/dDT/WNOQrROYtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\DashboardApp\\DashBoardApplication\\ChartDemo\\ChartDemo\\ChartDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

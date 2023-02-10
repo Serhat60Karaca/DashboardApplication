@@ -10,6 +10,11 @@ namespace ChartDemo.Controllers
         {
             _context = context;
         }
+        public IActionResult Deneme()
+        {
+            var salesdata = _context.Sales.ToList();
+            return View(salesdata);
+        }
         public IActionResult Index()
         {
             var salesdata = _context.Sales.ToList();
