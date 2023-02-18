@@ -43,10 +43,17 @@
             chart.data.datasets[0].data = salesData.map(function (sale) { return sale.amount; });
             chart.update();
         }
-        setInterval(chart.update, 0, console.log("updated"))
-        window.addEventListener('load', function (event) {
+
+        document.querySelector("#add-sale-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
+            var amount = document.querySelector("#Amount").value;
+
+            // Add the sale to the database
+            // (Assuming you have implemented a way to communicate with the server and add a sale to the database)
+
+            // Update the chart data
+            var newSale = { createdDate: new Date(), amount: amount };
             updateChartData(newSale);
         });
     </script>
